@@ -26,9 +26,9 @@ public class GenerateGround : MonoBehaviour {
 		int tA = 0;
 
 		// Dirt
-		for (int i = 0; i < 30; i++)
+		for (int i = 0; i < 80; i++)
 		{
-			if (tA < 1 && i % 8 == 0)
+			if (tA < 1 && i % 4 == 0)
 			{
 				randL = Random.Range(5, 10);
 				randA = Random.Range(2, 4);

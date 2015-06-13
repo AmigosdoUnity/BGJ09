@@ -19,7 +19,7 @@ public class playerMovement : MonoBehaviour {
 	void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D> ();
-		c = gameObject.GetComponent<Collider2D> ();
+		c = gameObject.GetComponent<PolygonCollider2D> ();
 
 		s = transform.localScale;
 		ts = s;
@@ -40,7 +40,6 @@ public class playerMovement : MonoBehaviour {
 				vel.y = jumpSpeed * Time.deltaTime * 50;
 			}
 		}
-
 		rb.velocity = vel;
 		////////// end Velocidade
 

@@ -7,6 +7,8 @@ public class GenerateGround : MonoBehaviour {
 	
 	public List<Espaço> e = new List<Espaço>();
 
+	public int AlturaMax = 80;
+
 	private SpriteRenderer sr;
 
 	// Use this for initialization
@@ -26,17 +28,23 @@ public class GenerateGround : MonoBehaviour {
 		int tA = 0;
 
 		// Dirt
-		for (int i = 0; i < 80; i++)
+		for (int i = 0; i < AlturaMax; i++)
 		{
 			if (tA < 1 && i % 4 == 0)
 			{
 				randL = Random.Range(5, 10);
 				randA = Random.Range(3, 5);
-				randP = Random.Range(0, 28 - randL);
+				randP = Random.Range(1, 27 - randL);
 
 				tL = randL;
 				tA = randA;
-				Debug.Log(randA + " e " + randL);
+
+				if (i+randA >= AlturaMax)
+				{
+					tL = 0;
+					tA = 0;
+				}
+
 			} else if (tA > 0)
 			{
 				tL = randL;
@@ -47,7 +55,7 @@ public class GenerateGround : MonoBehaviour {
 			{
 				if (j < randP || tL == 0)
 				{
-					if (Random.Range(0,4)%4 == 0 && j < 22)
+					if (Random.Range(0,4)%4 == 0 && j < 22 && i < AlturaMax-3)
 						tL = Random.Range(3, 6);
 
 					Vector3 t = transform.position;
@@ -76,6 +84,7 @@ public class GenerateGround : MonoBehaviour {
 				}
 			}
 		}
+		Debug.Log (e.Count);
 		///////// end Dirt
 	}
 }

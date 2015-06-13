@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11467278}
   - 114: {fileID: 11401212}
   - 114: {fileID: 11485014}
+  - 114: {fileID: 11400944}
   m_Layer: 0
   m_Name: Animattion
   m_TagString: Untagged
@@ -31,6 +32,7 @@ GameObject:
   - 114: {fileID: 11400336}
   - 61: {fileID: 6114228}
   - 114: {fileID: 11422090}
+  - 60: {fileID: 6063672}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -78,6 +80,25 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!60 &6063672
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187642}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: 9ef456edcba13994788cfb6d54679575, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -.0399996452, y: .085797213}
+      - {x: -.0395876579, y: -.0788816065}
+      - {x: -.0194702148, y: -.0896198377}
+      - {x: .0244026184, y: -.090357773}
+      - {x: .0411453247, y: -.0803008229}
+      - {x: .0399996452, y: .085797213}
 --- !u!61 &6114228
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -90,7 +111,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .0799999982, y: .180000007}
+  m_Size: {x: .0799999982, y: .170000002}
 --- !u!114 &11400336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,8 +123,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e3ff45d354aee4789f455847518405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
   jumpSpeed: 3
+  state: air
+--- !u!114 &11400944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b18eb47502dfa4e9fa23da0ca56a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nome: PickAxe
+  frame:
+  - {fileID: 21300014, guid: 31746a8cb24a6ba48a172b92c09feb9b, type: 3}
+  - {fileID: 21300016, guid: 31746a8cb24a6ba48a172b92c09feb9b, type: 3}
+  - {fileID: 21300018, guid: 31746a8cb24a6ba48a172b92c09feb9b, type: 3}
+  time: []
+  speed: 8
+  style: normal
 --- !u!114 &11401212
 MonoBehaviour:
   m_ObjectHideFlags: 1

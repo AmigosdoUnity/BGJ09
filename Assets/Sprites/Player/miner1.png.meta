@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 31746a8cb24a6ba48a172b92c09feb9b
-timeCreated: 1434158998
+timeCreated: 1434174651
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,9 @@ TextureImporter:
     21300008: miner1_4
     21300010: miner1_5
     21300012: miner1_6
+    21300014: miner1_7
+    21300016: miner1_8
+    21300018: miner1_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,7 +67,7 @@ TextureImporter:
         width: 8
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_1
       rect:
@@ -74,7 +77,7 @@ TextureImporter:
         width: 8
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_2
       rect:
@@ -84,7 +87,7 @@ TextureImporter:
         width: 10
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_3
       rect:
@@ -94,7 +97,7 @@ TextureImporter:
         width: 8
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_4
       rect:
@@ -104,7 +107,7 @@ TextureImporter:
         width: 10
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_5
       rect:
@@ -114,7 +117,7 @@ TextureImporter:
         width: 8
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_6
       rect:
@@ -125,6 +128,36 @@ TextureImporter:
         height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 56
+        width: 12
+        height: 22
+      alignment: 9
+      pivot: {x: .358333349, y: .409091264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 16
+        height: 18
+      alignment: 9
+      pivot: {x: .256250024, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 56
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: .315384507, y: .505555451}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

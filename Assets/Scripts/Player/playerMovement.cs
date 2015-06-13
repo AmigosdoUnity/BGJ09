@@ -45,12 +45,16 @@ public class playerMovement : MonoBehaviour {
 		// Posiçao ajuste
 		Vector3 p = transform.position;
 
-		if (p.x < -53.9f)
+		if (p.x < -53.9f) 
+		{
 			p.x = -53.9f;
+			transform.position = p;
+		}
 		else if (p.x > -46.1f)
+		{
 			p.x = -46.1f;
-
-		transform.position = p;
+			transform.position = p;
+		}
 		////////// end Posiçao ajuste
 
 

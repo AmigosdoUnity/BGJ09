@@ -31,7 +31,7 @@ public class GenerateGround : MonoBehaviour {
 			if (tA < 1 && i % 4 == 0)
 			{
 				randL = Random.Range(5, 10);
-				randA = Random.Range(2, 4);
+				randA = Random.Range(3, 5);
 				randP = Random.Range(0, 28 - randL);
 
 				tL = randL;
@@ -47,6 +47,9 @@ public class GenerateGround : MonoBehaviour {
 			{
 				if (j < randP || tL == 0)
 				{
+					if (Random.Range(0,4)%4 == 0 && j < 22)
+						tL = Random.Range(3, 6);
+
 					Vector3 t = transform.position;
 
 					t.x += j * (sr.bounds.size.x-0.003f);
@@ -55,7 +58,7 @@ public class GenerateGround : MonoBehaviour {
 					GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 
 					obj.transform.parent = transform;
-				} else if (j >= randP)
+				} else if (j >= randP && tL > 0)
 				{
 					tL--;
 				}

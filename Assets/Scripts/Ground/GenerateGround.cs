@@ -19,14 +19,14 @@ public class GenerateGround : MonoBehaviour {
 	private void generateGround()
 	{
 		// Cobertura
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 30; i++)
 		{
-			for (int j = 0; j < 7; j++)
+			for (int j = 0; j < 28; j++)
 			{
 				Vector3 t = transform.position;
 
-				t.x += j * sr.bounds.size.x;
-				t.y -= i * sr.bounds.size.y;
+				t.x += j * (sr.bounds.size.x-0.003f);
+				t.y -= i * (sr.bounds.size.y-0.003f);
 
 				GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 

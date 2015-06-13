@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 31746a8cb24a6ba48a172b92c09feb9b
-timeCreated: 1434154188
+timeCreated: 1434156055
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: miner1_0
     21300002: miner1_1
+    21300004: miner1_2
+    21300006: miner1_3
+    21300008: miner1_4
+    21300010: miner1_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,7 +59,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1
+        y: 81
         width: 8
         height: 18
       alignment: 0
@@ -65,7 +69,47 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 1
+        y: 81
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 81
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 81
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 81
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 81
         width: 8
         height: 18
       alignment: 0

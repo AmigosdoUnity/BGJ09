@@ -9,7 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 470182}
   - 212: {fileID: 21248410}
-  - 61: {fileID: 6117272}
+  - 61: {fileID: 6131114}
+  - 61: {fileID: 6179694}
+  - 58: {fileID: 5834904}
+  - 58: {fileID: 5827914}
   m_Layer: 8
   m_Name: dirt
   m_TagString: Dirt
@@ -24,12 +27,38 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.7474251, y: -1.23052955, z: 0}
+  m_LocalPosition: {x: -50.5662613, y: -6.19344425, z: 8.83776855}
   m_LocalScale: {x: 5, y: 5, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6117272
+--- !u!58 &5827914
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193700}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: 9ef456edcba13994788cfb6d54679575, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: .0250000004, y: .0250000004}
+  serializedVersion: 2
+  m_Radius: .00499999989
+--- !u!58 &5834904
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193700}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: 9ef456edcba13994788cfb6d54679575, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -.0250000004, y: .0250000004}
+  serializedVersion: 2
+  m_Radius: .00499999989
+--- !u!61 &6131114
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -41,7 +70,20 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .0599999987, y: .0599999987}
+  m_Size: {x: .0500000007, y: .0599999987}
+--- !u!61 &6179694
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193700}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: 9ef456edcba13994788cfb6d54679575, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .0599999987, y: .0500000007}
 --- !u!212 &21248410
 SpriteRenderer:
   m_ObjectHideFlags: 1

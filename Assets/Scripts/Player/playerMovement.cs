@@ -19,10 +19,25 @@ public class playerMovement : MonoBehaviour {
 	public string state = "ground";
 	public SpriteAnimator animator;
 	private bool walking = false;
+	private int mineType = 1;
+
+	void MineTransition()
+	{
+		if( Input.GetAxisRaw("Vertical") < 0 )
+		{
+			animator.Play( "Shovel" );
+			mineType = 1;
+		}
+		else
+		{
+			animator.Play( "PickAxe" );
+			mineType = 0;
+		}
+	}
 	void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D> ();
-		c = gameObject.GetComponent<PolygonCollider2D> ();
+		c = gameObject.GetComponent<CircleCollider2D> ();
 
 		s = transform.localScale;
 		ts = s;
@@ -38,7 +53,7 @@ public class playerMovement : MonoBehaviour {
 
 		if( state == "ground" )
 		{
-			vel.y = -0.2f;
+			//vel.y = -0.2f;
 			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
 			if( !walking  )if( Input.GetAxis ("Horizontal")!= 0 )
 			{
@@ -54,7 +69,7 @@ public class playerMovement : MonoBehaviour {
 			if( Input.GetKeyDown( KeyCode.Space))
 			{
 				state = "mine";
-				animator.Play( "PickAxe" );
+				MineTransition();
 			}
 			else if ( (Input.GetAxisRaw("Vertical") > 0)  )
 			{
@@ -74,24 +89,35 @@ public class playerMovement : MonoBehaviour {
 			if( Input.GetKeyDown( KeyCode.Space))
 			{
 				state = "mine";
-				animator.Play( "PickAxe" );
+				MineTransition();
 			}
 		}
 		if( state == "mine" )
 		{
 			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 10;
-			if( animator.done )
+			if( animator.AccessEvent() )
 			{
 				int cont = 0;
 				while( cont < 5 )
 				{
 					Vector2 orig;
 					Vector2 dir;
-					dir.y = 0;
-					dir.x = transform.localScale.x;
-					orig.x = transform.position.x + transform.localScale.x*0.09f;
-					orig.y = transform.position.y + 0.25f - (0.07f*cont);
-					hit = Physics2D.Raycast( orig, dir,  0.05f );
+
+					if(mineType == 0)
+					{
+						dir.y = 0;
+						dir.x = transform.localScale.x;
+						orig.x = transform.position.x + transform.localScale.x*0.09f;
+						orig.y = transform.position.y + 0.25f - (0.07f*cont);
+					}
+					else
+					{
+						dir.y = -1;
+						dir.x = 0;
+						orig.x = transform.position.x ;
+						orig.y = transform.position.y - transform.localScale.y*0.17f  ;
+					}
+					hit = Physics2D.Raycast( orig, dir,  0.03f );
 
 					if( hit.collider != null )
 					{
@@ -102,6 +128,9 @@ public class playerMovement : MonoBehaviour {
 					}
 					cont++;
 				}
+			}
+			if( animator.done )
+			{
 				state = "air";
 				animator.Play( "Idle" );
 				walking = false;

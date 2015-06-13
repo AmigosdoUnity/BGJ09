@@ -5,9 +5,9 @@ public class Projetil : MonoBehaviour {
 
 	public byte speed;
 
-	private float timeCount = 0;
+	public Transform player;
 
-	private int dir = 1;
+	private float timeCount = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class Projetil : MonoBehaviour {
 		// Velocidade
 		Vector3 p = transform.position;
 
-		p.x += dir * Time.deltaTime * speed / 10;
+		p += (player.position - transform.position).normalized * Time.deltaTime * speed / 10;
 
 		transform.position = p;
 		///////// end Velocidade
@@ -36,8 +36,8 @@ public class Projetil : MonoBehaviour {
 		//////// end Timer
 	}
 
-	public void setDirection(int d)
+	public void setPlayer(Transform p)
 	{
-		dir = d;
+		player = p;
 	}
 }

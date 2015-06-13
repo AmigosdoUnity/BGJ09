@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 457190}
   - 212: {fileID: 21277460}
-  - 114: {fileID: 11469358}
   - 50: {fileID: 5065258}
   - 61: {fileID: 6131164}
+  - 114: {fileID: 11469358}
   m_Layer: 0
   m_Name: EnemyRangedNormal
   m_TagString: Untagged
@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c341ac3e70ec87441a39ff2618728a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
   projetil: {fileID: 164728, guid: 0f315cbf199c0b642af0e39a9cd9970b, type: 2}
+  dir: 0
 --- !u!212 &21277460
 SpriteRenderer:
   m_ObjectHideFlags: 1

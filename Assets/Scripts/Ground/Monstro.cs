@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
-public class Espaço {
+public class Monstro {
 
 	public Vector3 position;
 
 	public int alt, largura;
 
-	public Espaço (Vector3 _p, int _a, int _l)
+	public Monstro (Vector3 _p, int _a, int _l)
 	{
 		position = _p;
 		alt = _a;

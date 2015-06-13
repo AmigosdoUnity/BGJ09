@@ -5,9 +5,15 @@ public class GenerateGround : MonoBehaviour {
 
 	public GameObject dirt;
 	
-	public List<Espaço> e = new List<Espaço>();
+	public List<Monstro> m = new List<Monstro>();
+
+	public List<GameObject> mP = new List<GameObject> ();
 
 	public int AlturaMax = 80;
+
+	public Transform MonsterFolder;
+
+	public Transform player;
 
 	private SpriteRenderer sr;
 
@@ -16,6 +22,7 @@ public class GenerateGround : MonoBehaviour {
 	{
 		sr = dirt.GetComponent<SpriteRenderer> ();
 		generateGround ();
+		generateMonsters ();
 	}
 
 	private void generateGround()
@@ -78,13 +85,43 @@ public class GenerateGround : MonoBehaviour {
 					t.x += j * (sr.bounds.size.x-0.003f);
 					t.y -= i * (sr.bounds.size.y-0.003f);
 
-					Espaço te = new Espaço(t, randA, randL);
+					Monstro tm = new Monstro(t, randA, randL);
 
-					e.Add(te);
+					m.Add(tm);
 				}
 			}
 		}
-		Debug.Log (e.Count);
 		///////// end Dirt
+	}
+
+	private void generateMonsters()
+	{
+		int tam = m.Count;
+
+		int[] tipos = new int[mP.Count];
+
+		Debug.Log (m.Count + " e " + mP.Count);
+
+		for (int i = 0; i < tam; i++)
+		{
+			Debug.Log(m[i].position);
+			GameObject obj = GameObject.Instantiate(mP[Random.Range(0,mP.Count)], m[i].position, Quaternion.identity) as GameObject;
+
+			obj.transform.parent = MonsterFolder;
+
+			EnemyPatrol p = obj.GetComponent<EnemyPatrol>();
+			EnemyRanged r = obj.GetComponent<EnemyRanged>();
+
+			if (p != null)
+			{
+				p.setPatrol(obj.transform.position, m[i].largura, m[i].alt);
+			}
+
+			if (r != null)
+			{
+				r.player = player;
+			}
+		}
+
 	}
 }

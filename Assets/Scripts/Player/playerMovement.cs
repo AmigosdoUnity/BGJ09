@@ -16,6 +16,8 @@ public class playerMovement : MonoBehaviour {
 	private Vector3 s;
 	private Vector3 ts;
 
+	public string state = "ground";
+
 	void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D> ();
@@ -31,14 +33,27 @@ public class playerMovement : MonoBehaviour {
 		// Velocidade
 		Vector3 vel = rb.velocity;
 
-		vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
+		//// state machine
 
-		if (Input.GetAxisRaw("Vertical") > 0)
+		if( state == "ground" )
 		{
-			if (c.IsTouchingLayers(1 << 8))
+			vel.y = -0.2f;
+			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
+			if (Input.GetAxisRaw("Vertical") > 0)
 			{
 				vel.y = jumpSpeed * Time.deltaTime * 50;
 			}
+			if( ! c.IsTouchingLayers(1 << 8) )
+			{
+				state = "air";
+			}
+		}
+		if( state == "air" )
+		{
+			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
+			if( c.IsTouchingLayers(1 << 8) )
+				state = "ground";
+
 		}
 		rb.velocity = vel;
 		////////// end Velocidade

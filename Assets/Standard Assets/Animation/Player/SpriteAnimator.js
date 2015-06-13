@@ -7,7 +7,19 @@ var speed:float; //// animation speed
 var timer:float; /// contador
 var autoPlay:int= -1;   ///// which animation will play automatically
 var done:boolean = false;    /////////// animation reach its end
+var event:boolean = false;
+var canEvent:boolean = false;
 
+function AccessEvent(  ):boolean
+{
+	if( event )
+	{
+		event = false;
+		canEvent = false;
+		return true;
+	}
+	return false;
+}
 function GetAnimation( nome:String):int
 {
 	var cont:int = 0;
@@ -34,6 +46,8 @@ function Play( i:int )
 	sprt.sprite = curAnim.frame[curFrame];   ///// 
 	timer = 0;
 	done = false;
+	event = false;
+	canEvent = true;
 }
 function Play( s:String )
 {
@@ -75,5 +89,9 @@ function Update()
 			}
 			sprt.sprite = curAnim.frame[curFrame];
 		}
+		if( curAnim.eventFrame >= 0 )
+		if( curFrame == curAnim.eventFrame )
+		if(canEvent)
+			event = true;
 	}
 }

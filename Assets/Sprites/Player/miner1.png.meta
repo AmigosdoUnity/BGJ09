@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 31746a8cb24a6ba48a172b92c09feb9b
-timeCreated: 1434174651
+timeCreated: 1434228955
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,9 @@ TextureImporter:
     21300014: miner1_7
     21300016: miner1_8
     21300018: miner1_9
+    21300020: miner1_10
+    21300022: miner1_11
+    21300024: miner1_12
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -127,7 +130,7 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_7
       rect:
@@ -137,7 +140,7 @@ TextureImporter:
         width: 12
         height: 22
       alignment: 9
-      pivot: {x: .358333349, y: .409091264}
+      pivot: {x: .340307474, y: .412894845}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_8
       rect:
@@ -147,7 +150,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 9
-      pivot: {x: .256250024, y: .5}
+      pivot: {x: .25, y: .494444519}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: miner1_9
       rect:
@@ -157,7 +160,37 @@ TextureImporter:
         width: 13
         height: 18
       alignment: 9
-      pivot: {x: .315384507, y: .505555451}
+      pivot: {x: .300000131, y: .488889068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 32
+        width: 10
+        height: 18
+      alignment: 9
+      pivot: {x: .289999962, y: .527777791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 33
+        width: 15
+        height: 18
+      alignment: 9
+      pivot: {x: .266666681, y: .494444519}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 33
+        width: 12
+        height: 21
+      alignment: 9
+      pivot: {x: .325000137, y: .428571433}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

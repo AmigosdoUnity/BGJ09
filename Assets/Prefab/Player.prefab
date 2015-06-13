@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11401212}
   - 114: {fileID: 11485014}
   - 114: {fileID: 11400944}
+  - 114: {fileID: 11422186}
   m_Layer: 0
   m_Name: Animattion
   m_TagString: Untagged
@@ -32,7 +33,7 @@ GameObject:
   - 114: {fileID: 11400336}
   - 61: {fileID: 6114228}
   - 114: {fileID: 11422090}
-  - 60: {fileID: 6063672}
+  - 58: {fileID: 5889120}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -47,7 +48,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.9550018, y: .382999986, z: 0}
+  m_LocalPosition: {x: -50.1199989, y: .510999978, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 493494}
@@ -77,11 +78,11 @@ Rigidbody2D:
   m_GravityScale: 1
   m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!60 &6063672
-PolygonCollider2D:
+  m_CollisionDetection: 1
+--- !u!58 &5889120
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -90,15 +91,9 @@ PolygonCollider2D:
   m_Material: {fileID: 6200000, guid: 9ef456edcba13994788cfb6d54679575, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -.0132230129, y: -.0285918079}
-      - {x: -.0273246765, y: -.0836872682}
-      - {x: -.00656890869, y: -.0896198377}
-      - {x: .0123939514, y: -.089582108}
-      - {x: .0292523708, y: -.0841969848}
-      - {x: .0136388149, y: -.0290558394}
+  m_Offset: {x: 0, y: -.0599999987}
+  serializedVersion: 2
+  m_Radius: .0340000018
 --- !u!61 &6114228
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -109,9 +104,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 9ef456edcba13994788cfb6d54679575, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: .0110908151}
   serializedVersion: 2
-  m_Size: {x: .0799999982, y: .170000002}
+  m_Size: {x: .0649999976, y: .147818267}
 --- !u!114 &11400336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +141,7 @@ MonoBehaviour:
   time: []
   speed: 16
   style: normal
+  eventFrame: 1
 --- !u!114 &11401212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,6 +162,7 @@ MonoBehaviour:
   time: []
   speed: 8
   style: loop
+  eventFrame: -1
 --- !u!114 &11422090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,6 +175,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   store: {fileID: 0}
+--- !u!114 &11422186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b18eb47502dfa4e9fa23da0ca56a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nome: Shovel
+  frame:
+  - {fileID: 21300020, guid: 31746a8cb24a6ba48a172b92c09feb9b, type: 3}
+  - {fileID: 21300022, guid: 31746a8cb24a6ba48a172b92c09feb9b, type: 3}
+  - {fileID: 21300024, guid: 31746a8cb24a6ba48a172b92c09feb9b, type: 3}
+  time: []
+  speed: 16
+  style: normal
+  eventFrame: 1
 --- !u!114 &11467278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,6 +214,8 @@ MonoBehaviour:
   timer: 0
   autoPlay: 0
   done: 0
+  event: 0
+  canEvent: 0
 --- !u!114 &11485014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +233,7 @@ MonoBehaviour:
   time: []
   speed: 1
   style: normal
+  eventFrame: -1
 --- !u!212 &21205804
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -3,13 +3,11 @@ using System.Collections;
 
 public class GenerateGround : MonoBehaviour {
 
+	public GameObject lSquare;
+
 	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	void Start () 
+	{
 	
 	}
 }

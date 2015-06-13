@@ -11,29 +11,48 @@ public class playerMovement : MonoBehaviour {
 
 	private RaycastHit2D hit;
 
+	private Collider2D c;
+
+	private Vector3 s;
+	private Vector3 ts;
+
 	void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D> ();
+		c = gameObject.GetComponent<Collider2D> ();
+
+		s = transform.localScale;
+		ts = s;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
+		// Velocidade
 		Vector3 vel = rb.velocity;
 
 		vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
 
-		hit = Physics2D.Raycast (transform.position, Vector3.down, transform.localScale.y / 2 + 0.1f, 1 << 8);
-
 		if (Input.GetAxisRaw("Vertical") > 0)
 		{
-			if (hit.collider != null)
+			if (c.IsTouchingLayers(1<<8))
 			{
-				vel.y = jumpSpeed * Time.deltaTime;
+				vel.y = jumpSpeed * Time.deltaTime * 50;
 			}
 		}
 
-
 		rb.velocity = vel;
+		////////// end Velocidade
+
+
+
+		// Sprite pela mov
+		if (Input.GetAxisRaw ("Horizontal") < 0)
+			ts.x = -s.x;
+		else if (Input.GetAxisRaw ("Horizontal") > 0)
+			ts.x = s.x;
+			
+		transform.localScale = ts;
+		////////// end Sprite pela mov
 	}
 }

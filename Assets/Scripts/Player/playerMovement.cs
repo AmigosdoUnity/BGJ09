@@ -47,13 +47,21 @@ public class playerMovement : MonoBehaviour {
 			}
 			if( walking  )if( Input.GetAxis ("Horizontal") == 0 )
 			{
+				animator.Play( "Idle" );
 				walking = false;
 			}
-			if (Input.GetAxisRaw("Vertical") > 0)
+
+			if( Input.GetKeyDown( KeyCode.Space))
+			{
+				state = "mine";
+				animator.Play( "PickAxe" );
+			}
+			else if ( (Input.GetAxisRaw("Vertical") > 0)  )
 			{
 				vel.y = jumpSpeed * Time.deltaTime * 50;
+				state = "air";
 			}
-			if( ! c.IsTouchingLayers(1 << 8) )
+			else if( ! c.IsTouchingLayers(1 << 8) )
 			{
 				state = "air";
 			}
@@ -63,7 +71,21 @@ public class playerMovement : MonoBehaviour {
 			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
 			if( c.IsTouchingLayers(1 << 8) )
 				state = "ground";
-
+			if( Input.GetKeyDown( KeyCode.Space))
+			{
+				state = "mine";
+				animator.Play( "PickAxe" );
+			}
+		}
+		if( state == "mine" )
+		{
+			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 10;
+			if( animator.done )
+			{
+				state = "air";
+				animator.Play( "Idle" );
+				walking = false;
+			}
 		}
 		rb.velocity = vel;
 		////////// end Velocidade
@@ -81,12 +103,15 @@ public class playerMovement : MonoBehaviour {
 
 
 		// Sprite pela mov
-		if (Input.GetAxisRaw ("Horizontal") < 0)
-			ts.x = -s.x;
-		else if (Input.GetAxisRaw ("Horizontal") > 0)
-			ts.x = s.x;
-			
-		transform.localScale = ts;
+		if( state != "mine" )
+		{
+			if (Input.GetAxisRaw ("Horizontal") < 0)
+				ts.x = -s.x;
+			else if (Input.GetAxisRaw ("Horizontal") > 0)
+				ts.x = s.x;
+				
+			transform.localScale = ts;
+		}
 		////////// end Sprite pela mov
 	}
 }

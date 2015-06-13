@@ -53,7 +53,8 @@ public class playerMovement : MonoBehaviour {
 
 		if( state == "ground" )
 		{
-			//vel.y = -0.2f;
+			vel.y = -0.2f;
+			vel.x = -0.05f * transform.localScale.x;
 			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
 			if( !walking  )if( Input.GetAxis ("Horizontal")!= 0 )
 			{

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 31746a8cb24a6ba48a172b92c09feb9b
-timeCreated: 1434228955
+timeCreated: 1434238703
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -17,6 +17,21 @@ TextureImporter:
     21300020: miner1_10
     21300022: miner1_11
     21300024: miner1_12
+    21300026: bat1
+    21300028: bat2
+    21300030: zomb1
+    21300032: zomb2
+    21300034: zomb3
+    21300036: zomb4
+    21300038: plant1
+    21300040: plant2
+    21300042: plant3
+    21300044: plant4
+    21300046: thornball
+    21300048: rocks
+    21300050: goldBarStack
+    21300052: GoldBar
+    21300054: GoldBag
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -191,6 +206,156 @@ TextureImporter:
         height: 21
       alignment: 9
       pivot: {x: .325000137, y: .428571433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 85
+        width: 12
+        height: 10
+      alignment: 9
+      pivot: {x: .616666794, y: .449999988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 84
+        width: 12
+        height: 12
+      alignment: 9
+      pivot: {x: .625, y: .458333343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zomb1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 56
+        width: 9
+        height: 18
+      alignment: 9
+      pivot: {x: .560000002, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zomb2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 56
+        width: 7
+        height: 18
+      alignment: 9
+      pivot: {x: .419999987, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zomb3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 56
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zomb4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 56
+        width: 7
+        height: 18
+      alignment: 9
+      pivot: {x: .419999987, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: plant1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 33
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: plant2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 33
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: plant3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 33
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: plant4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 33
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: thornball
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 39
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 89
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goldBarStack
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 90
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GoldBar
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 86
+        width: 8
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GoldBag
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 85
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 31746a8cb24a6ba48a172b92c09feb9b
-timeCreated: 1434156055
+timeCreated: 1434158998
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: miner1_3
     21300008: miner1_4
     21300010: miner1_5
+    21300012: miner1_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -112,6 +113,16 @@ TextureImporter:
         y: 81
         width: 8
         height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: miner1_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 72
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

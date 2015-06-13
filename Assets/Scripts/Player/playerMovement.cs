@@ -82,6 +82,26 @@ public class playerMovement : MonoBehaviour {
 			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 10;
 			if( animator.done )
 			{
+				int cont = 0;
+				while( cont < 5 )
+				{
+					Vector2 orig;
+					Vector2 dir;
+					dir.y = 0;
+					dir.x = transform.localScale.x;
+					orig.x = transform.position.x + transform.localScale.x*0.09f;
+					orig.y = transform.position.y + 0.25f - (0.07f*cont);
+					hit = Physics2D.Raycast( orig, dir,  0.05f );
+
+					if( hit.collider != null )
+					{
+						if( hit.collider.gameObject.tag == "Dirt")
+						{
+							GameObject.Destroy( hit.collider.gameObject );
+						}
+					}
+					cont++;
+				}
 				state = "air";
 				animator.Play( "Idle" );
 				walking = false;

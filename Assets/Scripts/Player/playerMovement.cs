@@ -17,7 +17,8 @@ public class playerMovement : MonoBehaviour {
 	private Vector3 ts;
 
 	public string state = "ground";
-
+	public SpriteAnimator animator;
+	private bool walking = false;
 	void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D> ();
@@ -39,6 +40,15 @@ public class playerMovement : MonoBehaviour {
 		{
 			vel.y = -0.2f;
 			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
+			if( !walking  )if( Input.GetAxis ("Horizontal")!= 0 )
+			{
+				animator.Play( "Walk" );
+				walking = true;
+			}
+			if( walking  )if( Input.GetAxis ("Horizontal") == 0 )
+			{
+				walking = false;
+			}
 			if (Input.GetAxisRaw("Vertical") > 0)
 			{
 				vel.y = jumpSpeed * Time.deltaTime * 50;

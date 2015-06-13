@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 470182}
   - 212: {fileID: 21248410}
-  - 61: {fileID: 6138988}
+  - 60: {fileID: 6017268}
   m_Layer: 8
   m_Name: dirt
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6138988
-BoxCollider2D:
+--- !u!60 &6017268
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -40,8 +40,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: .0599999987, y: .0599999987}
+  m_Points:
+    m_Paths:
+    - - {x: .0199073795, y: .0298751872}
+      - {x: -.0199638363, y: .0299715977}
+      - {x: -.0299247745, y: .0200008024}
+      - {x: -.0299110413, y: -.0203768462}
+      - {x: -.019923402, y: -.0298439302}
+      - {x: .019888306, y: -.0299248043}
+      - {x: .029821014, y: -.0201507118}
+      - {x: .0298500061, y: .0200008042}
 --- !u!212 &21248410
 SpriteRenderer:
   m_ObjectHideFlags: 1

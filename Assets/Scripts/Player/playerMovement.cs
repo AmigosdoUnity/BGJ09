@@ -31,11 +31,9 @@ public class playerMovement : MonoBehaviour {
 		// Velocidade
 		Vector3 vel = rb.velocity;
 
-		vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
-
 		if (Input.GetAxisRaw("Vertical") > 0)
 		{
-			if (c.IsTouchingLayers(1<<8))
+			if (c.IsTouchingLayers(1 << 8))
 			{
 				vel.y = jumpSpeed * Time.deltaTime * 50;
 			}
@@ -44,6 +42,16 @@ public class playerMovement : MonoBehaviour {
 		rb.velocity = vel;
 		////////// end Velocidade
 
+		// Posiçao ajuste
+		Vector3 p = transform.position;
+
+		if (p.x < -53.9f)
+			p.x = -53.9f;
+		else if (p.x > -46.1f)
+			p.x = -46.1f;
+
+		transform.position = p;
+		////////// end Posiçao ajuste
 
 
 		// Sprite pela mov

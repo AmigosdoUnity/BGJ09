@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class GenerateGround : MonoBehaviour {
 
 	public GameObject dirt;
+
+	public List<Espaço> e = new List<Espaço>();
 
 	private SpriteRenderer sr;
 
@@ -31,5 +33,6 @@ public class GenerateGround : MonoBehaviour {
 				obj.transform.parent = transform;
 			}
 		}
+		///////// end Cobertura
 	}
 }

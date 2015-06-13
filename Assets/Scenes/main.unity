@@ -858,7 +858,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirt: {fileID: 193700, guid: 2d52ad9a01da07f4cbab3dfb15296e2d, type: 2}
-  e: []
 --- !u!1 &432002994
 GameObject:
   m_ObjectHideFlags: 0

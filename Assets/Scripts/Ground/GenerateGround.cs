@@ -107,22 +107,22 @@ public class GenerateGround : MonoBehaviour {
 			Vector3 t = transform.position;
 			t.y -= cont * (sr.bounds.size.y-0.003f);
 
-			t.x += 0;
+			t.x = transform.position.x;
 			GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 			obj.AddComponent< Indestructible >( );
 			obj.GetComponent<SpriteRenderer>().sprite = indeSprite;
 			obj.transform.parent = transform;
 			////
-			t.x += 27 * (sr.bounds.size.x-0.003f);
+			t.x = transform.position.x+ 27 * (sr.bounds.size.x-0.003f);
 			obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 			obj.AddComponent< Indestructible >( );
 			obj.GetComponent<SpriteRenderer>().sprite = indeSprite;
 			obj.transform.parent = transform;
 			////////
-			t.x += 26 * (sr.bounds.size.x-0.003f);
+			t.x = transform.position.x+ 26 * (sr.bounds.size.x-0.003f);
 			obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 			obj.transform.parent = transform;
-			t.x += 1 * (sr.bounds.size.x-0.003f);
+			t.x = transform.position.x+ 1 * (sr.bounds.size.x-0.003f);
 			obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 			obj.transform.parent = transform;
 
@@ -132,7 +132,7 @@ public class GenerateGround : MonoBehaviour {
 		while(cont2 < 28)
 		{
 			Vector3 t = transform.position;
-			t.y -= cont * (sr.bounds.size.y-0.003f);
+			t.y = transform.position.y - cont * (sr.bounds.size.y-0.003f);
 			
 			t.x += cont2 * (sr.bounds.size.x-0.003f);
 			GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
@@ -142,7 +142,7 @@ public class GenerateGround : MonoBehaviour {
 
 			if( (cont2 > 0) && (cont2 < 27) )
 			{
-				t.y -= (cont-1) * (sr.bounds.size.y-0.003f);
+				t.y = transform.position.y - (cont-1) * (sr.bounds.size.y-0.003f);
 				obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 				obj.transform.parent = transform;
 			}

@@ -42,7 +42,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projetil: {fileID: 164728, guid: 0f315cbf199c0b642af0e39a9cd9970b, type: 2}
-  dir: 0
+  player: {fileID: 0}
 --- !u!212 &21277460
 SpriteRenderer:
   m_ObjectHideFlags: 1

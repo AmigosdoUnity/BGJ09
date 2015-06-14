@@ -37,7 +37,7 @@ public class GenerateGround : MonoBehaviour {
 		// Dirt
 		for (int i = 0; i < AlturaMax; i++)
 		{
-			if (tA < 1 && i % 4 == 0)
+			if (tA < 1 && i % 5 == 0)
 			{
 				randL = Random.Range(5, 10);
 				randA = Random.Range(3, 5);
@@ -78,8 +78,10 @@ public class GenerateGround : MonoBehaviour {
 					tL--;
 				}
 
-				if (tA == 1 && j == randP)
+				if (tA == 0 && j == randP)
 				{
+					Debug.Log(i + " e " + j);
+
 					Vector3 t = transform.position;
 
 					t.x += j * (sr.bounds.size.x-0.003f);

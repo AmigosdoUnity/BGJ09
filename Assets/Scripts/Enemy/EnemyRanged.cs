@@ -24,9 +24,12 @@ public class EnemyRanged : MonoBehaviour {
 		if (timeCount > 2)
 		{
 			timeCount = 0;
-			GameObject obj = GameObject.Instantiate(projetil, transform.position + (player.position - transform.position).normalized * 3 * sr.bounds.size.x /2, Quaternion.identity) as GameObject;
+			if (Vector3.Distance(player.position, transform.position) < 3)
+			{
+				GameObject obj = GameObject.Instantiate(projetil, transform.position + (player.position - transform.position).normalized * 3 * sr.bounds.size.x /2, Quaternion.identity) as GameObject;
 
-			obj.GetComponent<Projetil>().setPlayer(player);
+				obj.GetComponent<Projetil>().setPlayer(player);
+			}
 		}
 
 		timeCount += Time.deltaTime;

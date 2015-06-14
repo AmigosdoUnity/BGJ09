@@ -65,14 +65,15 @@ public class GenerateGround : MonoBehaviour {
 			{
 				if (j < randP || tL == 0)
 				{
-					if (Random.Range(0,4)%4 == 0 && j < 22 && i < AlturaMax-3)
-						tL = Random.Range (3, 6);
-
-
 					Vector3 t = transform.position;
-
+					
 					t.x += j * (sr.bounds.size.x-0.003f);
 					t.y -= i * (sr.bounds.size.y-0.003f);
+
+					if (Random.Range(0,4)%4 == 0 && j < 22 && i < AlturaMax-3)
+					{
+						tL = Random.Range (3, 6);
+					}
 
 					GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 
@@ -85,6 +86,14 @@ public class GenerateGround : MonoBehaviour {
 				} else if (j >= randP && tL > 0)
 				{
 					tL--;
+
+					Vector3 t = transform.position;
+					
+					t.x += j * (sr.bounds.size.x-0.003f);
+					t.y -= i * (sr.bounds.size.y-0.003f);
+
+					if (tL == 4)
+						m.Add(new Monstro(t, randA, tL));
 				}
 
 				if (tA == 0 && j == randP)

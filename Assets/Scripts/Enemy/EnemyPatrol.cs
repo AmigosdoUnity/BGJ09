@@ -11,6 +11,8 @@ public class EnemyPatrol : MonoBehaviour {
 	
 	private int dir = 1;
 
+	private SpriteRenderer sr;
+
 	public byte speed;
 
 	// Use this for initialization
@@ -20,7 +22,9 @@ public class EnemyPatrol : MonoBehaviour {
 
 		startPosition = transform.position;
 
-		rb = gameObject.GetComponent<Rigidbody2D> ();	
+		rb = gameObject.GetComponent<Rigidbody2D> ();
+
+		sr = transform.GetChild(0).GetComponent<SpriteRenderer> ();
 	}
 	
 	// Update is called once per frame
@@ -31,15 +35,16 @@ public class EnemyPatrol : MonoBehaviour {
 		t.x = dir * speed * Time.deltaTime * 5;
 		
 		rb.velocity = t;
-		
-		if (transform.position.x - startPosition.x > largura * 0.3f)
-		{
-			dir = -1;
-		} else if (transform.position.x - startPosition.x < 0)
-		{
-			dir = 1;
-		}
 		///////// end Movimento
+
+		RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector2.right * dir, sr.bounds.size.x/2, 1 << 8);
+
+		Debug.DrawRay (transform.position, Vector3.right * dir);
+
+		if (hit.collider != null)
+		{
+			dir = -dir;
+		}
 	}
 
 	public void setPatrol(Vector3 sp, int l, int a)

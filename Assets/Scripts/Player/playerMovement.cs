@@ -20,6 +20,7 @@ public class playerMovement : MonoBehaviour {
 	public SpriteAnimator animator;
 	private bool walking = false;
 	private int mineType = 1;
+	public GameObject WinPanel;
 
 	void MineTransition()
 	{
@@ -126,6 +127,11 @@ public class playerMovement : MonoBehaviour {
 						if( hit.collider.gameObject.GetComponent<Indestructible>() == null )
 						{
 							GameObject.Destroy( hit.collider.gameObject );
+						}
+
+						if( hit.collider.gameObject.tag == "Pig" )
+						{
+
 						}
 					}
 					cont++;

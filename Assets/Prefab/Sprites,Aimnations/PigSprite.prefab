@@ -11,9 +11,10 @@ GameObject:
   - 212: {fileID: 21283678}
   - 114: {fileID: 11409920}
   - 114: {fileID: 11474084}
-  m_Layer: 0
+  - 65: {fileID: 6569658}
+  m_Layer: 9
   m_Name: PigSprite
-  m_TagString: Untagged
+  m_TagString: Pig
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,6 +31,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &6569658
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .230000004, y: .129999995, z: .200000003}
+  m_Center: {x: -.00459998846, y: 0, z: 0}
 --- !u!114 &11409920
 MonoBehaviour:
   m_ObjectHideFlags: 1

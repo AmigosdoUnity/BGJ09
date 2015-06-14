@@ -12,6 +12,8 @@ public class CutSceneController : MonoBehaviour {
 
 	public GameObject controlText;
 
+	public GameObject resetButton;
+
 	private RectTransform tt;
 
 	private string[] s = new string[4]
@@ -70,6 +72,7 @@ public class CutSceneController : MonoBehaviour {
 
 			transform.parent.gameObject.SetActive(false);
 			controlText.SetActive(true);
+			resetButton.SetActive(true);
 		}
 	}
 }

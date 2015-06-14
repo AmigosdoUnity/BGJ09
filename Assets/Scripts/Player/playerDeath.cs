@@ -18,4 +18,9 @@ public class playerDeath : MonoBehaviour {
 		gameObject.GetComponent<playerMovement> ().disableMovement();
 		transform.position = t.position;
 	}
+
+	public void resetPlayer()
+	{
+		transform.position = t.position;
+	}
 }

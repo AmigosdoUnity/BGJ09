@@ -1018,6 +1018,7 @@ MonoBehaviour:
   dirt: {fileID: 193700, guid: 2d52ad9a01da07f4cbab3dfb15296e2d, type: 2}
   mP:
   - {fileID: 192962, guid: a503a8f8024fa2d4d8c33c38217ce0f1, type: 2}
+  - {fileID: 192962, guid: 2a5ab9e635529bf44a0c3d4ac19d91e4, type: 2}
   AlturaMax: 160
   MonsterFolder: {fileID: 1076750970}
   player: {fileID: 757817718}

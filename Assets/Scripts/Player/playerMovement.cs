@@ -131,7 +131,8 @@ public class playerMovement : MonoBehaviour {
 
 						if( hit.collider.gameObject.tag == "Pig" )
 						{
-
+							WinPanel.SetActive (true);
+							disableMovement();
 						}
 					}
 					cont++;

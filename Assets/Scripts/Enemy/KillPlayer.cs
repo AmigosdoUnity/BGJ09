@@ -8,7 +8,6 @@ public class KillPlayer : MonoBehaviour {
 		if (c.gameObject.name == "Player")
 		{
 			c.transform.GetComponent<playerDeath>().playerDied();
-			GameObject.Destroy(gameObject);
 		}
 	}
 }

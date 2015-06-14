@@ -77,7 +77,7 @@ public class GenerateGround : MonoBehaviour {
 
 					GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 
-					if(Random.Range(0,1000) > 900 )
+					if(Random.Range(0,1000) > 800 )
 					{
 						obj.AddComponent< Indestructible >( );
 						obj.GetComponent<SpriteRenderer>().sprite = indeSprite;

@@ -886,6 +886,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11422090, guid: 951bb6321f4513f488d7c28bcba201b2, type: 2}
+      propertyPath: store
+      value: 
+      objectReference: {fileID: 1288291164}
     - target: {fileID: 11400336, guid: 951bb6321f4513f488d7c28bcba201b2, type: 2}
       propertyPath: WinPanel
       value: 
@@ -894,10 +898,6 @@ Prefab:
       propertyPath: t
       value: 
       objectReference: {fileID: 369719382}
-    - target: {fileID: 11422090, guid: 951bb6321f4513f488d7c28bcba201b2, type: 2}
-      propertyPath: store
-      value: 
-      objectReference: {fileID: 1288291164}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 951bb6321f4513f488d7c28bcba201b2, type: 2}
   m_IsPrefabParent: 0

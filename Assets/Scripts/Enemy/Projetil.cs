@@ -41,14 +41,11 @@ public class Projetil : MonoBehaviour {
 		player = p; 
 	}
 
-	void OnTriggerEnter(Collider c)
+	void OnTriggerEnter2D(Collider2D c)
 	{
-		if (c.gameObject.layer == 1 << 8)
+		if (c.gameObject.layer == 8)
 		{
 			GameObject.Destroy(gameObject);
-		} else if (c.gameObject.name == "Player")
-		{
-			c.transform.GetComponent<playerDeath>().playerDied();
 		}
 	}
 }

@@ -11,6 +11,8 @@ GameObject:
   - 212: {fileID: 21211168}
   - 58: {fileID: 5865092}
   - 114: {fileID: 11411070}
+  - 50: {fileID: 5088694}
+  - 114: {fileID: 11441460}
   m_Layer: 0
   m_Name: Projetil
   m_TagString: Untagged
@@ -30,6 +32,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5088694
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164728}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!58 &5865092
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -54,8 +71,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a6dd88f2c8cd548ab885c58e2907f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   player: {fileID: 0}
+--- !u!114 &11441460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e21e10c6cc83aa41a56e15339722fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21211168
 SpriteRenderer:
   m_ObjectHideFlags: 1

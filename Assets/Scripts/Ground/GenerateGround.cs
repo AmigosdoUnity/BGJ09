@@ -159,7 +159,6 @@ public class GenerateGround : MonoBehaviour {
 
 		for (int i = 0; i < tam; i++)
 		{
-			Debug.Log(m[i].position);
 			GameObject obj = GameObject.Instantiate(mP[Random.Range(0,mP.Count)], m[i].position, Quaternion.identity) as GameObject;
 
 			obj.transform.parent = MonsterFolder;

@@ -165,4 +165,10 @@ public class playerMovement : MonoBehaviour {
 		}
 		////////// end Sprite pela mov
 	}
+
+	public void disableMovement()
+	{
+		rb.velocity = Vector3.zero;
+		enabled = false;
+	}
 }

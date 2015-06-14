@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 414588}
   - 114: {fileID: 11479326}
   m_Layer: 0
-  m_Name: Dirt
+  m_Name: DirtGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5065258}
   - 61: {fileID: 6131164}
   - 114: {fileID: 11453496}
+  - 114: {fileID: 11498350}
   m_Layer: 0
   m_Name: EnemyNormal
   m_TagString: Untagged
@@ -142,6 +143,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &11498350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e21e10c6cc83aa41a56e15339722fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21264534
 SpriteRenderer:
   m_ObjectHideFlags: 1

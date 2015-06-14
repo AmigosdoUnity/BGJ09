@@ -40,4 +40,12 @@ public class Projetil : MonoBehaviour {
 	{
 		player = p; 
 	}
+
+	void OnTriggerEnter2D(Collider2D c)
+	{
+		if (c.gameObject.layer == 8)
+		{
+			GameObject.Destroy(gameObject);
+		}
+	}
 }

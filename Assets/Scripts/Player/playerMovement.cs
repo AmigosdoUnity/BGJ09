@@ -123,6 +123,7 @@ public class playerMovement : MonoBehaviour {
 					if( hit.collider != null )
 					{
 						if( hit.collider.gameObject.tag == "Dirt")
+						if( hit.collider.gameObject.GetComponent<Indestructible>() == null )
 						{
 							GameObject.Destroy( hit.collider.gameObject );
 						}

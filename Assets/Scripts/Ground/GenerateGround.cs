@@ -17,6 +17,8 @@ public class GenerateGround : MonoBehaviour {
 
 	private SpriteRenderer sr;
 
+	public Sprite indeSprite;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -74,6 +76,11 @@ public class GenerateGround : MonoBehaviour {
 
 					GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
 
+					if(Random.Range(0,1000) > 900 )
+					{
+						obj.AddComponent< Indestructible >( );
+						obj.GetComponent<SpriteRenderer>().sprite = indeSprite;
+					}
 					obj.transform.parent = transform;
 				} else if (j >= randP && tL > 0)
 				{
@@ -92,6 +99,54 @@ public class GenerateGround : MonoBehaviour {
 					m.Add(tm);
 				}
 			}
+		}
+		///////// final room
+		int cont = AlturaMax;
+		while( cont < AlturaMax+8 )
+		{
+			Vector3 t = transform.position;
+			t.y -= cont * (sr.bounds.size.y-0.003f);
+
+			t.x += 0;
+			GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
+			obj.AddComponent< Indestructible >( );
+			obj.GetComponent<SpriteRenderer>().sprite = indeSprite;
+			obj.transform.parent = transform;
+			////
+			t.x += 27 * (sr.bounds.size.x-0.003f);
+			obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
+			obj.AddComponent< Indestructible >( );
+			obj.GetComponent<SpriteRenderer>().sprite = indeSprite;
+			obj.transform.parent = transform;
+			////////
+			t.x += 26 * (sr.bounds.size.x-0.003f);
+			obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
+			obj.transform.parent = transform;
+			t.x += 1 * (sr.bounds.size.x-0.003f);
+			obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
+			obj.transform.parent = transform;
+
+			cont++;
+		}
+		int cont2 = 0;
+		while(cont2 < 28)
+		{
+			Vector3 t = transform.position;
+			t.y -= cont * (sr.bounds.size.y-0.003f);
+			
+			t.x += cont2 * (sr.bounds.size.x-0.003f);
+			GameObject obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
+			obj.AddComponent< Indestructible >( );
+			obj.GetComponent<SpriteRenderer>().sprite = indeSprite;
+			obj.transform.parent = transform;
+
+			if( (cont2 > 0) && (cont2 < 27) )
+			{
+				t.y -= (cont-1) * (sr.bounds.size.y-0.003f);
+				obj = GameObject.Instantiate(dirt, t, Quaternion.identity) as GameObject;
+				obj.transform.parent = transform;
+			}
+			cont2++;
 		}
 		///////// end Dirt
 	}

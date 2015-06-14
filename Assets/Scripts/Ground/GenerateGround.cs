@@ -164,8 +164,6 @@ public class GenerateGround : MonoBehaviour {
 	{
 		int tam = m.Count;
 
-		int[] tipos = new int[mP.Count];
-
 		for (int i = 0; i < tam; i++)
 		{
 			int selec = Random.Range(0,mP.Count);
@@ -176,13 +174,7 @@ public class GenerateGround : MonoBehaviour {
 
 			obj.transform.parent = MonsterFolder;
 
-			EnemyPatrol p = obj.GetComponent<EnemyPatrol>();
 			EnemyRanged r = obj.GetComponent<EnemyRanged>();
-
-			if (p != null)
-			{
-				p.setPatrol(obj.transform.position, m[i].largura, m[i].alt);
-			}
 
 			if (r != null)
 			{

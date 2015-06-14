@@ -59,7 +59,7 @@ public class CutSceneController : MonoBehaviour {
 
 				baloon.localScale = t;
 
-				tt.localScale = Vector3.one;
+				tt.localScale = t;
 			}
 		}else
 		{

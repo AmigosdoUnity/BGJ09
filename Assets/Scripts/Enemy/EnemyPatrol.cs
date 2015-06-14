@@ -5,10 +5,6 @@ public class EnemyPatrol : MonoBehaviour {
 
 	private Rigidbody2D rb;
 
-	private int largura, altura;
-	
-	private Vector3 startPosition;
-	
 	private int dir = 1;
 
 	private SpriteRenderer sr;
@@ -18,10 +14,6 @@ public class EnemyPatrol : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		largura = 2;
-
-		startPosition = transform.position;
-
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 
 		sr = transform.GetChild(0).GetComponent<SpriteRenderer> ();
@@ -45,13 +37,6 @@ public class EnemyPatrol : MonoBehaviour {
 		{
 			dir = -dir;
 		}
-	}
-
-	public void setPatrol(Vector3 sp, int l, int a)
-	{
-		startPosition = sp;
-		largura = l;
-		altura = a;
 	}
 
 	public int getDir()

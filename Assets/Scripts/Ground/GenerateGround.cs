@@ -21,6 +21,7 @@ public class GenerateGround : MonoBehaviour {
 	void Start () 
 	{
 		sr = dirt.GetComponent<SpriteRenderer> ();
+		Random.seed = System.DateTime.Now.Second;
 		generateGround ();
 		generateMonsters ();
 	}
@@ -63,7 +64,8 @@ public class GenerateGround : MonoBehaviour {
 				if (j < randP || tL == 0)
 				{
 					if (Random.Range(0,4)%4 == 0 && j < 22 && i < AlturaMax-3)
-						tL = Random.Range(3, 6);
+						tL = Random.Range (3, 6);
+
 
 					Vector3 t = transform.position;
 
@@ -80,8 +82,6 @@ public class GenerateGround : MonoBehaviour {
 
 				if (tA == 0 && j == randP)
 				{
-					Debug.Log(i + " e " + j);
-
 					Vector3 t = transform.position;
 
 					t.x += j * (sr.bounds.size.x-0.003f);
@@ -101,8 +101,6 @@ public class GenerateGround : MonoBehaviour {
 		int tam = m.Count;
 
 		int[] tipos = new int[mP.Count];
-
-		Debug.Log (m.Count + " e " + mP.Count);
 
 		for (int i = 0; i < tam; i++)
 		{

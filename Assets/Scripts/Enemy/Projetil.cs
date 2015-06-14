@@ -38,6 +38,17 @@ public class Projetil : MonoBehaviour {
 
 	public void setPlayer(Transform p)
 	{
-		player = p;
+		player = p; 
+	}
+
+	void OnTriggerEnter(Collider c)
+	{
+		if (c.gameObject.layer == 1 << 8)
+		{
+			GameObject.Destroy(gameObject);
+		} else if (c.gameObject.name == "Player")
+		{
+			c.transform.GetComponent<playerDeath>().playerDied();
+		}
 	}
 }

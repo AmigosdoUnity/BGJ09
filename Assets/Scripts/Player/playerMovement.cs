@@ -35,9 +35,14 @@ public class playerMovement : MonoBehaviour {
 			mineType = 0;
 		}
 	}
-	void Start()
+
+	void Awake()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D> ();
+	}
+
+	void Start()
+	{
 		c = gameObject.GetComponent<CircleCollider2D> ();
 
 		s = transform.localScale;

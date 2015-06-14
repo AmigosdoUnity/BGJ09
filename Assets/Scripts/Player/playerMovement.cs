@@ -18,8 +18,6 @@ public class playerMovement : MonoBehaviour {
 
 	public string state = "ground";
 
-	private SpriteRenderer sr;
-
 	public SpriteAnimator animator;
 	private bool walking = false;
 	private int mineType = 1;
@@ -47,7 +45,6 @@ public class playerMovement : MonoBehaviour {
 	void Start()
 	{
 		c = gameObject.GetComponent<CircleCollider2D> ();
-		sr = gameObject.GetComponent<SpriteRenderer> ();
 
 		s = transform.localScale;
 		ts = s;

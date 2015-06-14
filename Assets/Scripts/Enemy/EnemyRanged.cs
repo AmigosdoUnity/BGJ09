@@ -8,14 +8,6 @@ public class EnemyRanged : MonoBehaviour {
 	public Transform player;
 
 	private float timeCount = 0;
-
-	private SpriteRenderer sr;
-
-	// Use this for initialization
-	void Start () 
-	{
-		sr = gameObject.GetComponent<SpriteRenderer> ();
-	}
 	
 	// Update is called once per frame
 	void Update ()

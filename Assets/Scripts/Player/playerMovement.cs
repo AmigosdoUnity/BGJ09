@@ -11,12 +11,15 @@ public class playerMovement : MonoBehaviour {
 
 	private RaycastHit2D hit;
 
-	private Collider2D c;
+	private CircleCollider2D c;
 
 	private Vector3 s;
 	private Vector3 ts;
 
 	public string state = "ground";
+
+	private SpriteRenderer sr;
+
 	public SpriteAnimator animator;
 	private bool walking = false;
 	private int mineType = 1;
@@ -44,6 +47,7 @@ public class playerMovement : MonoBehaviour {
 	void Start()
 	{
 		c = gameObject.GetComponent<CircleCollider2D> ();
+		sr = gameObject.GetComponent<SpriteRenderer> ();
 
 		s = transform.localScale;
 		ts = s;
@@ -91,8 +95,12 @@ public class playerMovement : MonoBehaviour {
 		if( state == "air" )
 		{
 			vel.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime * 20;
-			if( c.IsTouchingLayers(1 << 8) )
+
+			RaycastHit2D hit = Physics2D.Raycast(c.bounds.center - new Vector3(0,c.bounds.extents.y,0), Vector2.down, 0.05f, 1 << 8);
+
+			if (hit.collider != null)
 				state = "ground";
+
 			if( Input.GetKeyDown( KeyCode.Space))
 			{
 				state = "mine";
